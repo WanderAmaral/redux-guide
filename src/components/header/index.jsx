@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 // Components
 import Cart from "../cart/index";
-import UserActionTypes from "../../redux/user/action-types";
+import {loginUser, logoutUser} from "../../redux/user/actions";
 
 // Styles
 import * as Styles from "./styles";
@@ -22,16 +22,11 @@ function Header() {
   };
 
   const handleLoginClick = () => {
-      dispacht({
-        type: UserActionTypes.LOGIN,
-        payload: {name: "Wander", email:"wander@amaral.com"}
-      });
+      dispacht(loginUser({name: "Wander", email: "wander@amaral.com"}));
   };
 
   const handleLogoutClick = () => {
-    dispacht({
-      type: UserActionTypes.LOGOUT,
-    });
+    dispacht(logoutUser());
   };
 
   return (
