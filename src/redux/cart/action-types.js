@@ -1,5 +1,5 @@
 const CartActionTypes = {
-    ADD_PRODUCTS: "cart/products",
+    ADD_PRODUCT: "cart/products",
 }
 
 export default CartActionTypes;

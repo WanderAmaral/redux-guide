@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 
 // Styles
 import * as Styles from "./styles";
-import { addProductsToCard } from "../../redux/cart/actions";
+import { addProductToCard } from "../../redux/cart/actions";
 
 // Utilities
 
@@ -15,7 +15,7 @@ const ProductItem = ({ product }) => {
   const dispatch = useDispatch()
 
   const handleProductItem = () => {
-    dispatch(addProductsToCard(product))
+    dispatch(addProductToCard(product))
   }
   return (
     <Styles.ProductContainer>
